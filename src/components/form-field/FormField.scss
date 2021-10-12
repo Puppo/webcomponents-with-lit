@@ -1,0 +1,16 @@
+@import "bulma-scss/utilities/_all.scss";
+@import "bulma-scss/form/_all.scss";
+@import "bulma-scss/utilities/_controls.scss";
+
+:host {
+  display: block;
+  margin-bottom: 0.5em;
+
+  & + :host {
+    margin-top: 7px;
+  }
+
+  .control {
+    display: flex;
+  }
+}
