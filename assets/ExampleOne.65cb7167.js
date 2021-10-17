@@ -1,4 +1,4 @@
-import{s as r,p as c,o as d,i as a,n as u}from"./vendor.d9811822.js";var h=`/* Bulma Utilities */
+import{s as f,p as r,o as c,i as d,n as u}from"./vendor.d9811822.js";var h=`/* Bulma Utilities */
 .column {
   display: block;
   flex-basis: 0;
@@ -2075,31 +2075,28 @@ import{s as r,p as c,o as d,i as a,n as u}from"./vendor.d9811822.js";var h=`/* B
 }
 .columns {
   margin-top: 40px;
-}
-#box-one {
-  background-color: #9b0422;
-}
-#box-two {
-  background-color: #83ff5d;
-}`,p=Object.defineProperty,x=Object.getOwnPropertyDescriptor,o=(f,i,s,t)=>{for(var n=t>1?void 0:t?x(i,s):i,l=f.length-1,m;l>=0;l--)(m=f[l])&&(n=(t?m(i,s,n):m(n))||n);return t&&n&&p(i,s,n),n};const w="lit-example-tow";let e=class extends r{_onClick(){this.boxOne.contains(this.button)?this.boxTwo.appendChild(this.button):this.boxOne.appendChild(this.button)}render(){return c`
+}`,p=Object.defineProperty,x=Object.getOwnPropertyDescriptor,a=(t,e,i,s)=>{for(var n=s>1?void 0:s?x(e,i):e,l=t.length-1,m;l>=0;l--)(m=t[l])&&(n=(s?m(e,i,n):m(n))||n);return s&&n&&p(e,i,n),n};const w="lit-example-one";let o=class extends f{onEvent(t){return e=>{console.log(t,e.target);const i=document.createElement("lit-box");i.textContent=t,this.message.innerHTML="",this.message.appendChild(i)}}render(){return r`
       <lit-hero
         type="info"
-        title="Example Two"
-        sub-title="Lifecycle"
+        title="Example One"
+        sub-title="Component"
       ></lit-hero>
       <div class="columns is-centered">
-        <div id="box-one" class="column is-three-quarters">
-          <lit-button-with-life-cycle
-            id="my-button"
+        <div class="column has-text-centered">
+          <lit-button
             type="button"
-            style-type="primary"
-            @click=${()=>this._onClick()}
+            @click=${this.onEvent("Button onClicked")}
+            @mouseover=${this.onEvent("Button onMouseOver")}
+            @custom-focus=${this.onEvent("Button onCustomFocus")}
           >
-            Life Cycle
-          </lit-button-with-life-cycle>
+            Confirm
+          </lit-button>
         </div>
       </div>
-      <div class="columns is-centered">
-        <div id="box-two" class="column is-three-quarters"></div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="message"></div>
+        </div>
       </div>
-    `}};e.styles=[d(h)];o([a("#my-button")],e.prototype,"button",2);o([a("#box-one")],e.prototype,"boxOne",2);o([a("#box-two")],e.prototype,"boxTwo",2);e=o([u(w)],e);export{e as LitExampleTwo,w as LitExampleTwoSelector};
+    `}};o.styles=[c(h)];a([d(".message")],o.prototype,"message",2);o=a([u(w)],o);export{o as LitExampleOne,w as LitExampleOneSelector};

@@ -1,4 +1,4 @@
-import{s as f,p as r,o as c,i as d,n as u}from"./vendor.d9811822.js";var h=`/* Bulma Utilities */
+import{s as r,p as c,o as d,i as a,n as u}from"./vendor.d9811822.js";var h=`/* Bulma Utilities */
 .column {
   display: block;
   flex-basis: 0;
@@ -2075,28 +2075,44 @@ import{s as f,p as r,o as c,i as d,n as u}from"./vendor.d9811822.js";var h=`/* B
 }
 .columns {
   margin-top: 40px;
-}`,p=Object.defineProperty,x=Object.getOwnPropertyDescriptor,a=(i,n,o,t)=>{for(var e=t>1?void 0:t?x(n,o):n,l=i.length-1,m;l>=0;l--)(m=i[l])&&(e=(t?m(n,o,e):m(e))||e);return t&&e&&p(n,o,e),e};const w="lit-example-one";let s=class extends f{onEvent(i){return()=>{const n=document.createElement("lit-box");n.textContent=i,this.message.innerHTML="",this.message.appendChild(n)}}render(){return r`
+}
+#box-one {
+  background-color: #9b0422;
+}
+#box-two {
+  background-color: #83ff5d;
+}`,p=Object.defineProperty,x=Object.getOwnPropertyDescriptor,o=(f,i,s,t)=>{for(var n=t>1?void 0:t?x(i,s):i,l=f.length-1,m;l>=0;l--)(m=f[l])&&(n=(t?m(i,s,n):m(n))||n);return t&&n&&p(i,s,n),n};const w="lit-example-tow";let e=class extends r{onClick(){this.boxOne.contains(this.button)?this.boxTwo.appendChild(this.button):this.boxOne.appendChild(this.button)}onChangeColorClick(){this.button.setAttribute("style-type",this.button.styleType==="primary"?"warning":"primary")}render(){return c`
       <lit-hero
         type="info"
-        title="Example One"
-        sub-title="Component"
+        title="Example Two"
+        sub-title="Lifecycle"
       ></lit-hero>
       <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <lit-button
+        <div id="box-one" class="column is-three-quarters">
+          <lit-button-with-life-cycle
+            id="my-button"
             type="button"
-            @click=${this.onEvent("Button onClicked")}
-            @mouseover=${this.onEvent("Button onMouseOver")}
-            @custom-focus=${this.onEvent("Button onCustomFocus")}
+            style-type="primary"
+            @click=${()=>this.onClick()}
           >
-            Confirm
+            Life Cycle
+          </lit-button-with-life-cycle>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div id="box-two" class="column is-three-quarters"></div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-three-quarters">
+          <lit-button
+            id="my-button"
+            type="button"
+            style-type="info"
+            @click=${this.onChangeColorClick}
+          >
+            Change Color
           </lit-button>
         </div>
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <div class="message"></div>
-        </div>
-      </div>
-    `}};s.styles=[c(h)];a([d(".message")],s.prototype,"message",2);s=a([u(w)],s);export{s as LitExampleOne,w as LitExampleOneSelector};
+    `}};e.styles=[d(h)];o([a("#my-button")],e.prototype,"button",2);o([a("#box-one")],e.prototype,"boxOne",2);o([a("#box-two")],e.prototype,"boxTwo",2);e=o([u(w)],e);export{e as LitExampleTwo,w as LitExampleTwoSelector};
