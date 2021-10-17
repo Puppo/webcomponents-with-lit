@@ -2085,6 +2085,7 @@ import{s as f,p as r,o as c,i as d,n as u}from"./vendor.d9811822.js";var h=`/* B
         <div class="column has-text-centered">
           <lit-button
             type="button"
+            style-type="primary"
             @click=${this.onEvent("Button onClicked")}
             @mouseover=${this.onEvent("Button onMouseOver")}
             @custom-focus=${this.onEvent("Button onCustomFocus")}
