@@ -1166,7 +1166,7 @@ a.box:active {
 .buttons.is-right:not(.has-addons) .button:not(.is-fullwidth) {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-}`,U=Object.defineProperty,H=Object.getOwnPropertyDescriptor,x=(o,r,t,i)=>{for(var n=i>1?void 0:i?H(r,t):r,e=o.length-1,a;e>=0;e--)(a=o[e])&&(n=(i?a(r,t,n):a(n))||n);return i&&n&&U(r,t,n),n};const q="lit-button";let u=class extends c{constructor(){super(...arguments);this.type="button"}onMouseOver(o){o.preventDefault(),o.stopPropagation(),this.dispatchEvent(new CustomEvent("mouseover",{bubbles:!0,detail:this}))}onFocus(o){o.preventDefault(),o.stopPropagation(),this.dispatchEvent(new N({bubbles:!0}))}render(){const o=$({button:!0,[`is-${this.styleType}`]:!!this.styleType});return s`
+}`,U=Object.defineProperty,H=Object.getOwnPropertyDescriptor,x=(o,r,t,i)=>{for(var n=i>1?void 0:i?H(r,t):r,e=o.length-1,a;e>=0;e--)(a=o[e])&&(n=(i?a(r,t,n):a(n))||n);return i&&n&&U(r,t,n),n};const q="lit-button";let u=class extends c{constructor(){super(...arguments);this.type="button"}onMouseOver(o){o.preventDefault(),o.stopPropagation(),this.dispatchEvent(new CustomEvent("mouseover",{bubbles:!0,detail:this}))}onFocus(o){o.preventDefault(),o.stopPropagation(),this.dispatchEvent(new I({bubbles:!0}))}render(){const o=$({button:!0,[`is-${this.styleType}`]:!!this.styleType});return s`
       <button
         type=${this.type}
         class=${o}
@@ -1175,7 +1175,7 @@ a.box:active {
       >
         <slot></slot>
       </button>
-    `}};u.styles=[b(T)];x([l({reflect:!0,converter:{fromAttribute:o=>(console.log("LitButton -> converter -> fromAttribute",o),o),toAttribute:o=>{if(console.log("LitButton -> converter -> toAttribute",o),["button","submit","reset"].includes(o))return o;throw new Error(`LitButton -> Invalid type: ${o}`)}}})],u.prototype,"type",2);x([l({type:String,attribute:"style-type"})],u.prototype,"styleType",2);u=x([d(q)],u);class N extends Event{constructor(r){super("custom-focus",r||{})}}var R=`/* Bulma Utilities */
+    `}};u.styles=[b(T)];x([l({reflect:!0,converter:{fromAttribute:o=>{if(console.log("LitButton -> converter -> fromAttribute",o),["button","submit","reset"].includes(o))return o;throw new Error(`LitButton -> Invalid type: ${o}`)},toAttribute:o=>{if(console.log("LitButton -> converter -> toAttribute",o),["button","submit","reset"].includes(o))return o;throw new Error(`LitButton -> Invalid type: ${o}`)}}})],u.prototype,"type",2);x([l({type:String,attribute:"style-type"})],u.prototype,"styleType",2);u=x([d(q)],u);class I extends Event{constructor(r){super("custom-focus",r||{})}}var N=`/* Bulma Utilities */
 .button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -2326,7 +2326,7 @@ a.box:active {
 .buttons.is-right:not(.has-addons) .button:not(.is-fullwidth) {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-}`,I=Object.defineProperty,Y=Object.getOwnPropertyDescriptor,M=(o,r,t,i)=>{for(var n=i>1?void 0:i?Y(r,t):r,e=o.length-1,a;e>=0;e--)(a=o[e])&&(n=(i?a(r,t,n):a(n))||n);return i&&n&&I(r,t,n),n};const W="lit-button-with-life-cycle";let y=class extends u{constructor(){super();console.log("Button constructor")}connectedCallback(){super.connectedCallback(),console.log("Button connectedCallback")}disconnectedCallback(){super.disconnectedCallback(),console.log("Button disconnectedCallback")}attributeChangedCallback(o,r,t){super.attributeChangedCallback(o,r,t),console.log("Button attributeChangedCallback",{name:o,_old:r,value:t})}};y.styles=[b(R)];y=M([d(W)],y);var K=`/* Bulma Utilities */
+}`,R=Object.defineProperty,Y=Object.getOwnPropertyDescriptor,M=(o,r,t,i)=>{for(var n=i>1?void 0:i?Y(r,t):r,e=o.length-1,a;e>=0;e--)(a=o[e])&&(n=(i?a(r,t,n):a(n))||n);return i&&n&&R(r,t,n),n};const W="lit-button-with-life-cycle";let y=class extends u{constructor(){super();console.log("Button constructor")}connectedCallback(){super.connectedCallback(),console.log("Button connectedCallback")}disconnectedCallback(){super.disconnectedCallback(),console.log("Button disconnectedCallback")}attributeChangedCallback(o,r,t){super.attributeChangedCallback(o,r,t),console.log("Button attributeChangedCallback",{name:o,_old:r,value:t})}};y.styles=[b(N)];y=M([d(W)],y);var K=`/* Bulma Utilities */
 .file-cta,
 .file-name, .select select, .textarea, .input {
   -moz-appearance: none;
@@ -5573,7 +5573,7 @@ body.has-spaced-navbar-fixed-bottom {
               ${this.renderRow(o)}
             </tr>`)}
       </tbody>
-    </table>`}};h.styles=[b(sn)];k([l({type:Array})],h.prototype,"header",2);k([l({type:Array})],h.prototype,"footer",2);k([l({type:Array})],h.prototype,"data",2);h=k([d(bn)],h);const cn="modulepreload",_={},un="./",fn=function(r,t){return!t||t.length===0?r():Promise.all(t.map(i=>{if(i=`${un}${i}`,i in _)return;_[i]=!0;const n=i.endsWith(".css"),e=n?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${i}"]${e}`))return;const a=document.createElement("link");if(a.rel=n?"stylesheet":cn,n||(a.as="script",a.crossOrigin=""),a.href=i,document.head.appendChild(a),n)return new Promise((O,P)=>{a.addEventListener("load",O),a.addEventListener("error",P)})})).then(()=>r())};var vn=Object.defineProperty,hn=Object.getOwnPropertyDescriptor,gn=(o,r,t,i)=>{for(var n=i>1?void 0:i?hn(r,t):r,e=o.length-1,a;e>=0;e--)(a=o[e])&&(n=(i?a(r,t,n):a(n))||n);return i&&n&&vn(r,t,n),n};const pn="lit-app";let j=class extends c{async connectedCallback(){super.connectedCallback();const{mount:o}=await fn(()=>import("./LitApp.route.e80706d5.js"),["assets/LitApp.route.e80706d5.js","assets/vendor.d9811822.js"]);o(this.shadowRoot.querySelector("#app"))}render(){return s`<div>
+    </table>`}};h.styles=[b(sn)];k([l({type:Array})],h.prototype,"header",2);k([l({type:Array})],h.prototype,"footer",2);k([l({type:Array})],h.prototype,"data",2);h=k([d(bn)],h);const cn="modulepreload",_={},un="./",fn=function(r,t){return!t||t.length===0?r():Promise.all(t.map(i=>{if(i=`${un}${i}`,i in _)return;_[i]=!0;const n=i.endsWith(".css"),e=n?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${i}"]${e}`))return;const a=document.createElement("link");if(a.rel=n?"stylesheet":cn,n||(a.as="script",a.crossOrigin=""),a.href=i,document.head.appendChild(a),n)return new Promise((O,P)=>{a.addEventListener("load",O),a.addEventListener("error",P)})})).then(()=>r())};var vn=Object.defineProperty,hn=Object.getOwnPropertyDescriptor,gn=(o,r,t,i)=>{for(var n=i>1?void 0:i?hn(r,t):r,e=o.length-1,a;e>=0;e--)(a=o[e])&&(n=(i?a(r,t,n):a(n))||n);return i&&n&&vn(r,t,n),n};const pn="lit-app";let j=class extends c{async connectedCallback(){super.connectedCallback();const{mount:o}=await fn(()=>import("./LitApp.route.bdfd9fcd.js"),["assets/LitApp.route.bdfd9fcd.js","assets/vendor.d9811822.js"]);o(this.shadowRoot.querySelector("#app"))}render(){return s`<div>
       <lit-navbar></lit-navbar>
       <div id="app"></div>
     </div>`}};j=gn([d(pn)],j);const mn=()=>L(s`<lit-app></lit-app>`,document.querySelector("#app"));mn();export{fn as _};
